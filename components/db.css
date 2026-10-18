@@ -662,6 +662,41 @@
 .db-foot h2 { font-size: 3rem; margin: 0.8rem 0; }
 .db-legal { grid-column: 1 / -1; color: var(--steel); font-size: 0.82rem; }
 
+.db-mobar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 45;
+  height: calc(4.65rem + env(safe-area-inset-bottom));
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem calc(0.55rem + env(safe-area-inset-bottom));
+  background: #070708;
+  border-top: 1px solid rgb(255 255 255 / 0.14);
+}
+.db .db-mobar a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  padding: 0.72rem 0.4rem;
+  border: 1px solid rgb(255 255 255 / 0.42);
+  background: transparent;
+}
+.db .db-mobar a:first-child {
+  background: #fff;
+  color: #111;
+  -webkit-text-fill-color: #111;
+  border-color: #fff;
+}
+
 .db-reveal { opacity: 0; transform: translateY(1.4rem); animation: db-rise 0.9s cubic-bezier(0.16, 0.84, 0.3, 1) both; animation-play-state: paused; }
 .db-reveal[data-in='true'] { animation-play-state: running; }
 
@@ -715,8 +750,8 @@
   .db-section h2 { font-size: clamp(2.7rem, 12vw, 3.8rem); max-width: 100%; }
   .db-ask p { color: #f2f2f3; max-width: 36ch; }
   .db-logo, .db-foot .db-logo { height: 44px; }
-  .db-hero-swap { height: calc(100svh - 12rem); min-height: 32rem; }
-  .db-hero-page { height: calc(100svh - 12rem); min-height: 32rem; }
+  .db-hero-swap { height: calc(100svh - 12rem - env(safe-area-inset-bottom)); min-height: 32rem; }
+  .db-hero-page { height: calc(100svh - 12rem - env(safe-area-inset-bottom)); min-height: 32rem; }
   .db-hero-page::after { background: linear-gradient(180deg, rgb(7 7 8 / 0.28), transparent 24%); }
   .db-hero-copy {
     position: absolute;
@@ -751,6 +786,8 @@
   .db-strip { grid-template-columns: repeat(2, 1fr); }
   .db-strip figure { min-height: 12rem; }
   .db-tile, .db-tile:first-child { min-height: 22rem; grid-row: auto; }
+  .db-mobar { display: flex; }
+  .db { padding-bottom: calc(4.65rem + env(safe-area-inset-bottom)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .db-hero-copy, .db-rule, .db-ghost, .db-marquee-track, .db-reveal, .db-slide, .db-menu-row, .db-menu-title, .db-menu-call, .db-btn, .db-call, .db .rp-btn { animation: none; transition: none; }

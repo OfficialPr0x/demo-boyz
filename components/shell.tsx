@@ -96,6 +96,10 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
         <p className="db-legal">{site.footer.legal}</p>
       </footer>
+      <div className="db-mobar">
+        <a href={site.phone.href}>Call</a>
+        <Link href={path('/contact')}>Request</Link>
+      </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>
   );
