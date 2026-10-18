@@ -25,8 +25,9 @@ const sans = Outfit({
 export function Shell({ children }: { children: ReactNode }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'GeneralContractor',
+    '@type': 'HomeAndConstructionBusiness',
     name: site.brand,
+    description: site.tagline,
     telephone: site.phone.href.replace('tel:', ''),
     email: site.email.display,
     address: {

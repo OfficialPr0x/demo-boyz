@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   description: site.tagline,
   icons: { icon: site.favicon, apple: site.favicon },
   openGraph: {
-    title: 'Demo-Boyz · General contracting in Kelowna',
-    description: 'Houses and commercial work in Kelowna. Kitchens, framing, rough-in, and renovations. Call (250) 681-0511.',
+    title: 'Demo-Boyz · Demolition in Kelowna',
+    description: 'Demolition, selective deconstruction, flooring removal, and certified abatement in Kelowna. Call (250) 681-0511.',
     url: siteUrl,
     siteName: 'Demo-Boyz',
-    images: [{ url: '/share.png', width: 1200, height: 630, alt: 'Demo-Boyz. Houses and commercial work in Kelowna. Call (250) 681-0511.' }],
+    images: [{ url: '/share.png', width: 1200, height: 630, alt: 'Demo-Boyz. Demolition in Kelowna. Call (250) 681-0511.' }],
   },
 };
 

@@ -7,10 +7,10 @@ import { Reveal } from '@/components/reveal';
 import type { PosterSite } from '@/lib/types';
 
 const fromPage = [
-  ['from-page-hero.jpg', 'Kitchen'],
-  ['from-page-kitchen.jpg', 'The island'],
-  ['from-page-framing.jpg', 'Framing'],
-  ['from-page-rough.jpg', 'Rough-in'],
+  ['from-page-hero.jpg', 'Kitchen demo'],
+  ['from-page-kitchen.jpg', 'The kitchen'],
+  ['from-page-framing.jpg', 'Opened up'],
+  ['from-page-rough.jpg', 'Stripped back'],
   ['open-door.jpg', 'The opening'],
   ['open-room.jpg', 'The room'],
   ['lake-opening.jpg', 'The patio'],
