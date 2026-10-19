@@ -19,7 +19,7 @@ export function HeroSwap({
   requestHref,
 }: {
   frames: readonly Frame[];
-  phone: { display: string; href: string };
+  phone: { display: string; button: string; href: string };
   requestHref: string;
 }) {
   const [index, setIndex] = useState(0);
