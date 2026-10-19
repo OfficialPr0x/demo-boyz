@@ -4,13 +4,13 @@ export function DemoBoyzCall({
   phone,
   label = 'Call',
 }: {
-  phone: { display: string; href: string };
+  phone: { display: string; button: string; href: string };
   label?: string;
 }) {
   return (
     <a className="db-call" href={phone.href}>
       <em>{label}</em>
-      <strong>{phone.display}</strong>
+      <strong>{phone.button}</strong>
     </a>
   );
 }
@@ -19,7 +19,7 @@ export function DemoBoyzActions({
   phone,
   requestHref,
 }: {
-  phone: { display: string; href: string };
+  phone: { display: string; button: string; href: string };
   requestHref: string;
 }) {
   return (

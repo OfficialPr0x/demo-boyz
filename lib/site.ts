@@ -7,7 +7,7 @@ import type { PosterSite } from '@/lib/types';
  */
 const photo = (name: string) => `/${name}`;
 
-const phone = { display: '(250) 681-0511', href: 'tel:+12506810511' };
+const phone = { display: '250 899 - BOYZ', button: '250 899 - BOYZ', href: 'tel:+12508992699' };
 const email = { display: 'kyle@demo-boyz.com', href: 'mailto:kyle@demo-boyz.com' };
 
 export const site: PosterSite = {
@@ -67,7 +67,7 @@ export const site: PosterSite = {
     title: 'The Demo Boyz.',
     paragraphs: [
       'We are the Demo Boyz. Demolition in Kelowna. We take it apart. We do not build it back.',
-      'Call (250) 681-0511 or email kyle@demo-boyz.com.',
+      'Call 250 899 - BOYZ or email kyle@demo-boyz.com.',
     ],
     callLabel: 'Call the Demo Boyz',
     aboutLabel: 'About us',
@@ -87,7 +87,7 @@ export const site: PosterSite = {
       },
       {
         question: 'What number do I call?',
-        answer: '(250) 681-0511. That reaches the Demo Boyz.',
+        answer: '250 899 - BOYZ. That reaches the Demo Boyz.',
       },
       {
         question: 'What work do you take?',
@@ -103,13 +103,13 @@ export const site: PosterSite = {
   request: {
     kicker: 'Start here',
     title: 'Tell us what comes out.',
-    intro: 'Kelowna, the job, and a number we can reach. If it is urgent, call (250) 681-0511.',
+    intro: 'Kelowna, the job, and a number we can reach. If it is urgent, call 250 899 - BOYZ.',
   },
   serviceFormTitle: 'Tell us the town.',
-  serviceFormIntro: 'If it is happening now, call (250) 681-0511. Use the form when it can wait for a reply.',
+  serviceFormIntro: 'If it is happening now, call 250 899 - BOYZ. Use the form when it can wait for a reply.',
   servicesIntro: { kicker: 'The work', title: 'We take it out. We do not finish it.' },
   visit: { kicker: 'On site', title: 'The work we take.' },
-  areaFormIntro: 'Call (250) 681-0511 if it is happening now.',
+  areaFormIntro: 'Call 250 899 - BOYZ if it is happening now.',
   about: {
     hero: {
       photo: photo('kitchen.jpg'),
@@ -128,9 +128,9 @@ export const site: PosterSite = {
       title: 'The Demo Boyz.',
     },
     lede: 'We are a Kelowna demolition crew. Interior, exterior, and the whole house.',
-    intro: 'You deal with the Demo Boyz. Call (250) 681-0511 or email kyle@demo-boyz.com. We are at 302-540 Lawrence Ave.',
+    intro: 'You deal with the Demo Boyz. Call 250 899 - BOYZ or email kyle@demo-boyz.com. We are at 302-540 Lawrence Ave.',
     points: [
-      { title: 'The phone', body: '(250) 681-0511', href: phone.href },
+      { title: 'The phone', body: '250 899 - BOYZ', href: phone.href },
       { title: 'The email', body: 'kyle@demo-boyz.com', href: email.href },
       {
         title: 'The address',
@@ -151,14 +151,14 @@ export const site: PosterSite = {
     kicker: 'Request service',
     title: 'Tell us what comes out.',
     paragraphs: [
-      'Call the Demo Boyz at (250) 681-0511, or email kyle@demo-boyz.com.',
+      'Call the Demo Boyz at 250 899 - BOYZ, or email kyle@demo-boyz.com.',
       'Leave the room and a number. We will call you back.',
     ],
   },
   footer: {
     headline: 'Demo-Boyz. Kelowna.',
     blurb: 'Demolition, selective deconstruction, flooring removal, and certified abatement. Not building or finishing.',
-    legal: 'Demo-Boyz. 302-540 Lawrence Ave, Kelowna, BC V1Y 6L7. (250) 681-0511. kyle@demo-boyz.com.',
+    legal: 'Demo-Boyz. 302-540 Lawrence Ave, Kelowna, BC V1Y 6L7. 250 899 - BOYZ. kyle@demo-boyz.com.',
     servicesLabel: 'Work',
     townsLabel: 'Town',
   },
@@ -201,7 +201,7 @@ export const site: PosterSite = {
         { title: 'Interior', body: 'Kitchens, bathrooms, and the rooms between. Taken apart, not rebuilt.' },
         { title: 'Exterior and the house', body: 'The outside, and taking the whole house down.' },
       ],
-      expect: ['Say what has to come out.', 'Leave a number that gets answered.', 'Urgent work: call (250) 681-0511.'],
+      expect: ['Say what has to come out.', 'Leave a number that gets answered.', 'Urgent work: call 250 899 - BOYZ.'],
       photo: photo('hero-kitchen.jpg'),
       mobilePhoto: photo('hero-kitchen-mobile.jpg'),
       filmLine: 'Interior demo. Pry bar and saw.',
@@ -220,7 +220,7 @@ export const site: PosterSite = {
         { title: 'What goes', body: 'The room, the wall, or the piece that has to come out.' },
         { title: 'What stays', body: 'We work around the structure and the finishes you are keeping.' },
       ],
-      expect: ['Say what comes out and what stays.', 'We cover Kelowna.', 'Call (250) 681-0511 if it cannot wait.'],
+      expect: ['Say what comes out and what stays.', 'We cover Kelowna.', 'Call 250 899 - BOYZ if it cannot wait.'],
       photo: photo('open-room.jpg'),
       filmLine: 'One room opened. The rest left standing.',
     },
@@ -238,7 +238,7 @@ export const site: PosterSite = {
         { title: 'What we pull', body: 'Tile, carpet, hardwood, and the underlayment that has to go.' },
         { title: 'Where we stop', body: 'The subfloor. Installing the new floor is not our work.' },
       ],
-      expect: ['Name the floor that is coming up.', 'Say what stays underneath.', 'Urgent work: (250) 681-0511.'],
+      expect: ['Name the floor that is coming up.', 'Say what stays underneath.', 'Urgent work: 250 899 - BOYZ.'],
       photo: photo('hero-bath.jpg'),
       mobilePhoto: photo('hero-bath-mobile.jpg'),
       filmLine: 'Tile coming up.',
@@ -273,7 +273,7 @@ export const site: PosterSite = {
       lede: 'We are based in Kelowna. 302-540 Lawrence Ave, V1Y 6L7.',
       body: [
         'Demolition across the city. Interior, exterior, and taking houses down.',
-        'Call (250) 681-0511.',
+        'Call 250 899 - BOYZ.',
       ],
       jobs: ['Demolition', 'Selective deconstruction', 'Flooring removal', 'Abatement'],
       photo: photo('visit.jpg'),

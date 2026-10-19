@@ -59,7 +59,7 @@ export interface PosterSite {
   region: string;
   industry: string;
   website?: string;
-  phone: { display: string; href: string };
+  phone: { display: string; button: string; href: string };
   email: { display: string; href: string };
   theme: PosterTheme;
   logo: { src: string; alt: string; width: number; height: number };

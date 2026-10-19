@@ -39,7 +39,7 @@ export function DemoBoyzMenu({
 }: {
   work: readonly Item[];
   pages: readonly Item[];
-  phone: { display: string; href: string };
+  phone: { display: string; button: string; href: string };
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -93,7 +93,7 @@ export function DemoBoyzMenu({
           </div>
           <a className="db-menu-call" href={phone.href} onClick={close}>
             <em>Call</em>
-            <strong>{phone.display}</strong>
+            <strong>{phone.button}</strong>
           </a>
         </nav>
       </div>

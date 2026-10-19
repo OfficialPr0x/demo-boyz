@@ -74,7 +74,7 @@ export function RequestForm({ site, town }: { site: PosterSite; town?: string })
         <h3>{site.form.successTitle}</h3>
         <p>{site.form.successBody}</p>
         <a className="rp-btn rp-btn-navy" href={site.phone.href}>
-          Call {site.phone.display}
+          Call {site.phone.button}
         </a>
       </div>
     );
