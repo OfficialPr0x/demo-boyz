@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { path } from '@/lib/paths';
 import { RequestForm } from '@/components/form';
-import { DemoBoyzActions } from '@/components/actions';
+import { DemoBoyzActions, PhoneText } from '@/components/actions';
 import { Reveal } from '@/components/reveal';
 import type { PosterArea, PosterService, PosterSite } from '@/lib/types';
 
@@ -73,7 +73,9 @@ export function DemoBoyzServicePage({ site, service }: { site: PosterSite; servi
           </Reveal>
           <div>
             <p className="db-kicker">{site.serviceFormTitle}</p>
-            <p>{site.serviceFormIntro}</p>
+            <p>
+              <PhoneText text={site.serviceFormIntro} phone={site.phone} />
+            </p>
             <RequestForm site={site} />
           </div>
         </div>
@@ -122,7 +124,9 @@ export function DemoBoyzAreaPage({ site, area }: { site: PosterSite; area: Poste
             <h2>{area.headline}</h2>
             <p>{area.lede}</p>
             {area.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>
+                <PhoneText text={paragraph} phone={site.phone} />
+              </p>
             ))}
             <div className="db-page">
               {area.jobs.map((job) => (
@@ -134,7 +138,9 @@ export function DemoBoyzAreaPage({ site, area }: { site: PosterSite; area: Poste
           </Reveal>
           <div>
             <p className="db-kicker">Request service in {area.name}.</p>
-            <p>{site.areaFormIntro}</p>
+            <p>
+              <PhoneText text={site.areaFormIntro} phone={site.phone} />
+            </p>
             <RequestForm site={site} town={area.name} />
           </div>
         </div>
@@ -172,14 +178,16 @@ export function DemoBoyzAbout({ site }: { site: PosterSite }) {
       </section>
       <section className="db-split db-split-poster">
         <figure className="db-poster">
-          <Image src={site.about.still.photo} alt={site.about.still.alt} width={2368} height={1776} />
+          <Image src={site.about.still.photo} alt={site.about.still.alt} width={1448} height={1086} />
         </figure>
         <div className="db-split-copy">
           <Reveal>
             <p className="db-kicker">{site.about.still.kicker}</p>
             <h2>{site.about.still.title}</h2>
             <p>{site.about.lede}</p>
-            <p>{site.about.intro}</p>
+            <p>
+              <PhoneText text={site.about.intro} phone={site.phone} />
+            </p>
           </Reveal>
         </div>
       </section>
@@ -189,7 +197,13 @@ export function DemoBoyzAbout({ site }: { site: PosterSite }) {
             <article key={point.title}>
               <small>{point.title}</small>
               <h3>
-                {point.href ? <a href={point.href}>{point.body}</a> : point.body}
+                {point.href ? (
+                  <a className={point.href.startsWith('tel:') ? 'db-tap' : undefined} href={point.href}>
+                    {point.body}
+                  </a>
+                ) : (
+                  point.body
+                )}
               </h3>
             </article>
           ))}
@@ -216,7 +230,9 @@ export function DemoBoyzContact({ site }: { site: PosterSite }) {
           <p className="db-kicker">{site.contact.kicker}</p>
           <h2>{site.contact.title}</h2>
           {site.contact.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>
+              <PhoneText text={paragraph} phone={site.phone} />
+            </p>
           ))}
           <a className="db-phone" href={site.phone.href}>
             {site.phone.display}

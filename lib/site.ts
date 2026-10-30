@@ -3,7 +3,8 @@ import type { PosterSite } from '@/lib/types';
 /**
  * Demo-Boyz poster. Facts from the Facebook page captured into Studio
  * prospect 712b003f-0de1-4ae8-a73c-34c24e310f2a on 15 Oct 2026.
- * Photos are the rooms that page posted. No reviews, no ticket number.
+ * Photos are the rooms that page posted.
+ * Google reviews live in lib/google-reviews.ts. They are manually collected, not a live profile score.
  */
 const photo = (name: string) => `/${name}`;
 
@@ -61,8 +62,8 @@ export const site: PosterSite = {
   },
   filmLabel: 'The work',
   ownerPanel: {
-    photo: photo('crew.jpg'),
-    alt: 'The Demo Boyz, arms crossed in a gutted room.',
+    photo: photo('founders-studio.png'),
+    alt: 'The Demo Boyz, arms crossed in front of the studio logo.',
     kicker: 'The crew',
     title: 'The Demo Boyz.',
     paragraphs: [
@@ -121,8 +122,8 @@ export const site: PosterSite = {
       objectPosition: '50% 45%',
     },
     still: {
-      photo: photo('crew.jpg'),
-      alt: 'The Demo Boyz, arms crossed in a gutted room.',
+      photo: photo('founders-studio.png'),
+      alt: 'The Demo Boyz, arms crossed in front of the studio logo.',
       label: 'The crew',
       kicker: 'The crew',
       title: 'The Demo Boyz.',

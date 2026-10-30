@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState, type FormEvent } from 'react';
+import { PhoneText } from '@/components/actions';
 import type { PosterSite } from '@/lib/types';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -157,7 +158,11 @@ export function RequestForm({ site, town }: { site: PosterSite; town?: string })
             <textarea name="notes" placeholder={site.form.notesPlaceholder} />
           </label>
         </div>
-        {formError ? <p className="rp-error">{formError}</p> : null}
+        {formError ? (
+          <p className="rp-error">
+            <PhoneText text={formError} phone={site.phone} />
+          </p>
+        ) : null}
         <p>
           Or email <a href={site.email.href}>{site.email.display}</a>.
         </p>

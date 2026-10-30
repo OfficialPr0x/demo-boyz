@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 import { Big_Shoulders, Outfit } from 'next/font/google';
-import { DemoBoyzCall } from '@/components/actions';
+import { DemoBoyzCall, PhoneText } from '@/components/actions';
 import { DemoBoyzMenu } from '@/components/menu';
 import { path } from '@/lib/paths';
 import { site } from '@/lib/site';
@@ -91,11 +91,15 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
         <div>
           <p className="db-kicker">Reach</p>
-          <a href={site.phone.href}>{site.phone.display}</a>
+          <a className="db-tap" href={site.phone.href}>
+            {site.phone.display}
+          </a>
           <a href={site.email.href}>{site.email.display}</a>
           <Link href={path('/contact')}>Request service</Link>
         </div>
-        <p className="db-legal">{site.footer.legal}</p>
+        <p className="db-legal">
+          <PhoneText text={site.footer.legal} phone={site.phone} />
+        </p>
       </footer>
       <div className="db-mobar">
         <a href={site.phone.href}>Call</a>

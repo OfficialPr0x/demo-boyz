@@ -1,5 +1,26 @@
 import Link from 'next/link';
 
+export function PhoneText({
+  text,
+  phone,
+}: {
+  text: string;
+  phone: { display: string; href: string };
+}) {
+  const parts = text.split(phone.display);
+  if (parts.length === 1) return text;
+  return parts.map((part, index) => (
+    <span key={index}>
+      {part}
+      {index < parts.length - 1 ? (
+        <a className="db-tap" href={phone.href}>
+          {phone.display}
+        </a>
+      ) : null}
+    </span>
+  ));
+}
+
 export function DemoBoyzCall({
   phone,
   label = 'Call',

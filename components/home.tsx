@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { path } from '@/lib/paths';
+import { PhoneText } from '@/components/actions';
 import { RequestForm } from '@/components/form';
 import { HeroSwap } from '@/components/hero-swap';
 import { Reveal } from '@/components/reveal';
+import { ReviewsSection } from '@/components/reviews';
 import type { PosterSite } from '@/lib/types';
 
 const fromPage = [
@@ -81,14 +83,16 @@ export function DemoBoyzHome({ site }: { site: PosterSite }) {
 
       <section className="db-split db-split-poster">
         <figure className="db-poster">
-          <Image src={site.ownerPanel.photo} alt={site.ownerPanel.alt} width={2368} height={1776} priority />
+          <Image src={site.ownerPanel.photo} alt={site.ownerPanel.alt} width={1448} height={1086} priority />
         </figure>
         <div className="db-split-copy">
           <Reveal>
             <p className="db-kicker">{site.ownerPanel.kicker}</p>
             <h2>{site.ownerPanel.title}</h2>
             {site.ownerPanel.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>
+                <PhoneText text={paragraph} phone={site.phone} />
+              </p>
             ))}
             <div className="db-actions">
               <a className="db-btn" href={site.phone.href}>
@@ -111,7 +115,9 @@ export function DemoBoyzHome({ site }: { site: PosterSite }) {
               {site.faq.items.map((item) => (
                 <details key={item.question}>
                   <summary>{item.question}</summary>
-                  <p>{item.answer}</p>
+                  <p>
+                    <PhoneText text={item.answer} phone={site.phone} />
+                  </p>
                 </details>
               ))}
             </div>
@@ -133,12 +139,16 @@ export function DemoBoyzHome({ site }: { site: PosterSite }) {
         </div>
       </section>
 
+      <ReviewsSection quoteHref={path('/contact')} />
+
       <section className="db-section">
         <div className="db-wrap db-ask">
           <Reveal>
             <p className="db-kicker">{site.request.kicker}</p>
             <h2>{site.request.title}</h2>
-            <p>{site.request.intro}</p>
+            <p>
+              <PhoneText text={site.request.intro} phone={site.phone} />
+            </p>
             <a className="db-phone" href={site.phone.href}>
               {site.phone.display}
             </a>
