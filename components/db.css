@@ -765,6 +765,8 @@
   }
   .db-hero-page .db-kicker { color: #f4f4f5; }
   .db-hero-page h1 { font-size: clamp(3.4rem, 3.8vw, 5.2rem); }
+  .db-hero.db-hero-swap h1,
+  .db-hero.db-hero-swap .db-hero-title { font-size: clamp(3rem, 4.4vw, 4.6rem); max-width: 20ch; }
   .db-hero-page h1,
   .db-hero-page h1 em {
     color: #fff;
