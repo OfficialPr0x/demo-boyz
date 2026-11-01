@@ -62,12 +62,12 @@ export const site: PosterSite = {
   },
   filmLabel: 'The work',
   ownerPanel: {
-    photo: photo('founders-studio.png'),
-    alt: 'The Demo Boyz, arms crossed in front of the studio logo.',
+    photo: photo('crew-site.png'),
+    alt: 'The Demo Boyz, arms crossed in front of their bin and a house coming down.',
     kicker: 'The crew',
     title: 'The Demo Boyz.',
     paragraphs: [
-      'We are the Demo Boyz. Demolition in Kelowna. We take it apart. We do not build it back.',
+      'We are the Demo Boyz. Demolition in Kelowna and surrounding areas. We take it apart, so you can build it back better.',
       'Call 250 899 - BOYZ or email kyle@demo-boyz.com.',
     ],
     callLabel: 'Call the Demo Boyz',
